@@ -1,4 +1,4 @@
-п»ї/*
+/*
 * pll.h
 *
 * M.Fatih INANC
@@ -19,11 +19,11 @@ void pll_init(void)
   SYSCTL_RCC2_R |= SYSCTL_RCC2_USERCC2;
   SYSCTL_RCC2_R |= SYSCTL_RCC2_BYPASS2;
   SYSCTL_RCC_R  &= ~SYSCTL_RCC_XTAL_M;
-  SYSCTL_RCC_R  |= SYSCTL_RCC_XTAL_16MHZ;  	// 16 MHz РєРІР°СЂС†РµРІС‹Р№ СЂРµР·РѕРЅР°С‚РѕСЂ
+  SYSCTL_RCC_R  |= SYSCTL_RCC_XTAL_16MHZ;  	// 16 MHz кварцевый резонатор
   SYSCTL_RCC2_R &= ~SYSCTL_RCC2_OSCSRC2_M;
-  SYSCTL_RCC2_R |= SYSCTL_RCC2_OSCSRC2_MO; 	// РІС‹Р±РёСЂР°РµРј РєРІР°СЂС†РµРІС‹Р№ СЂРµР·РѕРЅР°С‚РѕСЂ MAIN OSC.
+  SYSCTL_RCC2_R |= SYSCTL_RCC2_OSCSRC2_MO; 	// выбираем кварцевый резонатор MAIN OSC.
   SYSCTL_RCC2_R &= ~SYSCTL_RCC2_PWRDN2;
-  SYSCTL_RCC2_R |= SYSCTL_RCC2_DIV400;		// Р§Р°СЃС‚РѕС‚Р° С€РёРЅС‹ = 400 MHz PLL
+  SYSCTL_RCC2_R |= SYSCTL_RCC2_DIV400;		// Частота шины = 400 MHz PLL
   SYSCTL_RCC2_R &= ~SYSCTL_RCC2_SYSDIV2_M;
   SYSCTL_RCC2_R &= ~SYSCTL_RCC2_SYSDIV2LSB;
 
